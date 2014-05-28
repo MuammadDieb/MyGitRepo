@@ -1,0 +1,13 @@
+@(text: String, d: Double)
+
+
+@import helper._
+@main("BleachGod"){
+
+<p>@text</p>
+@form(action = routes.Application.add()) { 
+<input type="submit" value=@d> 
+
+}
+
+}
