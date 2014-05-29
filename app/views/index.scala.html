@@ -1,4 +1,4 @@
-@(text: String, d: Double)
+@(text: String, result: String)
 
 
 @import helper._
@@ -7,9 +7,11 @@
 <p>@text</p>
 
 
-@helper.form(action = routes.Application.add){ 
-	<input type="text" id="petResponse" name="petResponse" /> 
-	<button type="submit" name="action">Solve It</button> 
+@helper.form(action = routes.Application.SolveByInputs){ 
+	<input type="text" id="petResponse" name="a"  /> X<sup>2</sup> +
+	<input type="text" id="petResponse" name="b"  /> X +
+	<input type="text" id="petResponse" name="c"  />  = 0
+	<br /><br /><button type="submit" name="action">Solve It</button> 
 }
-Result : @d
+<br />Result : <b> @result </b>
 }
